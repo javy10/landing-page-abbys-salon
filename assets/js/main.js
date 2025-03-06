@@ -122,13 +122,23 @@
   var whatsappUrl = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(mensaje);
 
   // Generar el código QR con la URL correcta
-  new QRCode(document.getElementById("qrcode"), {
-      text: whatsappUrl,
-      width: 200,
-      height: 200
-  });
+  // new QRCode(document.getElementById("qrcode"), {
+  //     text: whatsappUrl,
+  //     width: 200,
+  //     height: 200
+  // });
 
-  console.log("QR generado con la URL:", whatsappUrl); // Verificar la URL generada en la consola
+  // QR Code generation
+new QRCode(document.getElementById("qrcode"), {
+  text: "https://wa.me/+50370197540",
+  width: 180,
+  height: 180,
+  colorDark : "#000000",
+  colorLight : "#ffffff",
+  correctLevel : QRCode.CorrectLevel.H
+});
+
+  //console.log("QR generado con la URL:", whatsappUrl); // Verificar la URL generada en la consola
 
 
 })();
