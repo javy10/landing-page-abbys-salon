@@ -104,33 +104,16 @@
 
     // WHATSAPP
 
-  // var mensaje = "¡Hola! Estoy interesado en obtener más información."; // Mensaje personalizado
-  //   var whatsappUrl = "https://wa.me/50370197540?text=" + encodeURIComponent(mensaje); // Codifica el mensaje en URL
-
-  //   new QRCode(document.getElementById("qrcode"), {
-  //       text: whatsappUrl,
-  //       width: 200,
-  //       height: 200
-  //   });
-
-
   // Número de WhatsApp y mensaje predefinido
   var numeroWhatsApp = "50370197540"; // Cambia por tu número SIN "+" y SIN espacios
-  var mensaje = "¡Hola! Estoy interesado en obtener más información."; // Mensaje predefinido
+  var mensaje = "¡Hola! Me gustaría agendar una cita."; // Mensaje predefinido
 
   // Construcción de la URL de WhatsApp correctamente
   var whatsappUrl = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(mensaje);
 
-  // Generar el código QR con la URL correcta
-  // new QRCode(document.getElementById("qrcode"), {
-  //     text: whatsappUrl,
-  //     width: 200,
-  //     height: 200
-  // });
-
   // QR Code generation
 new QRCode(document.getElementById("qrcode"), {
-  text: "https://wa.me/+50370197540",
+  text: whatsappUrl,
   width: 180,
   height: 180,
   colorDark : "#000000",
